@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{AC1F95B7-32A1-4B8E-BEB9-ECCAAB0AC1A3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeOutput>tk8.6.11.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <NMakeOutput>tk8.6.11.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeOutput>tk8.6.11.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <NMakeOutput>tk8.6.11.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>
+    </NMakePreprocessorDefinitions>
+    <NMakeBuildCommandLine>nmake -nologo -f makefile.vc OPTS=threads MSVCDIR=IDE</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake -nologo -f makefile.vc OPTS=threads MSVCDIR=IDE</NMakeReBuildCommandLine>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\bitmaps\error.xbm" />
+    <None Include="..\bitmaps\gray12.xbm" />
+    <None Include="..\bitmaps\gray25.xbm" />
+    <None Include="..\bitmaps\gray50.xbm" />
+    <None Include="..\bitmaps\gray75.xbm" />
+    <None Include="..\bitmaps\hourglass.xbm" />
+    <None Include="..\bitmaps\info.xbm" />
+    <None Include="..\bitmaps\questhead.xbm" />
+    <None Include="..\bitmaps\question.xbm" />
+    <None Include="..\bitmaps\warning.xbm" />
+    <None Include="..\library\bgerror.tcl" />
+    <None Include="..\library\button.tcl" />
+    <None Include="..\library\choosedir.tcl" />
+    <None Include="..\library\clrpick.tcl" />
+    <None Include="..\library\comdlg.tcl" />
+    <None Include="..\library\console.tcl" />
+    <None Include="..\library\dialog.tcl" />
+    <None Include="..\library\entry.tcl" />
+    <None Include="..\library\focus.tcl" />
+    <None Include="..\library\fontchooser.tcl" />
+    <None Include="..\library\iconlist.tcl" />
+    <None Include="..\library\icons.tcl" />
+    <None Include="..\library\license.terms" />
+    <None Include="..\library\listbox.tcl" />
+    <None Include="..\library\megawidget.tcl" />
+    <None Include="..\library\menu.tcl" />
+    <None Include="..\library\mkpsenc.tcl" />
+    <None Include="..\library\msgbox.tcl" />
+    <None Include="..\library\obsolete.tcl" />
+    <None Include="..\library\optMenu.tcl" />
+    <None Include="..\library\palette.tcl" />
+    <None Include="..\library\panedwindow.tcl" />
+    <None Include="..\library\safetk.tcl" />
+    <None Include="..\library\scale.tcl" />
+    <None Include="..\library\scrlbar.tcl" />
+    <None Include="..\library\spinbox.tcl" />
+    <None Include="..\library\tclIndex" />
+    <None Include="..\library\tearoff.tcl" />
+    <None Include="..\library\text.tcl" />
+    <None Include="..\library\tk.tcl" />
+    <None Include="..\library\tkfbox.tcl" />
+    <None Include="..\library\ttk\altTheme.tcl" />
+    <None Include="..\library\ttk\aquaTheme.tcl" />
+    <None Include="..\library\ttk\button.tcl" />
+    <None Include="..\library\ttk\clamTheme.tcl" />
+    <None Include="..\library\ttk\classicTheme.tcl" />
+    <None Include="..\library\ttk\combobox.tcl" />
+    <None Include="..\library\ttk\cursors.tcl" />
+    <None Include="..\library\ttk\defaults.tcl" />
+    <None Include="..\library\ttk\entry.tcl" />
+    <None Include="..\library\ttk\fonts.tcl" />
+    <None Include="..\library\ttk\menubutton.tcl" />
+    <None Include="..\library\ttk\notebook.tcl" />
+    <None Include="..\library\ttk\panedwindow.tcl" />
+    <None Include="..\library\ttk\progress.tcl" />
+    <None Include="..\library\ttk\scale.tcl" />
+    <None Include="..\library\ttk\scrollbar.tcl" />
+    <None Include="..\library\ttk\sizegrip.tcl" />
+    <None Include="..\library\ttk\spinbox.tcl" />
+    <None Include="..\library\ttk\treeview.tcl" />
+    <None Include="..\library\ttk\ttk.tcl" />
+    <None Include="..\library\ttk\utils.tcl" />
+    <None Include="..\library\ttk\vistaTheme.tcl" />
+    <None Include="..\library\ttk\winTheme.tcl" />
+    <None Include="..\library\ttk\xpTheme.tcl" />
+    <None Include="..\library\unsupported.tcl" />
+    <None Include="..\library\xmfbox.tcl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\compat\stdlib.h" />
+    <ClInclude Include="..\compat\unistd.h" />
+    <ClInclude Include="..\generic\default.h" />
+    <ClInclude Include="..\generic\ks_names.h" />
+    <ClInclude Include="..\generic\tk.h" />
+    <ClInclude Include="..\generic\tk3d.h" />
+    <ClInclude Include="..\generic\tkArray.h" />
+    <ClInclude Include="..\generic\tkBusy.h" />
+    <ClInclude Include="..\generic\tkButton.h" />
+    <ClInclude Include="..\generic\tkCanvas.h" />
+    <ClInclude Include="..\generic\tkColor.h" />
+    <ClInclude Include="..\generic\tkDecls.h" />
+    <ClInclude Include="..\generic\tkDList.h" />
+    <ClInclude Include="..\generic\tkEntry.h" />
+    <ClInclude Include="..\generic\tkFileFilter.h" />
+    <ClInclude Include="..\generic\tkFont.h" />
+    <ClInclude Include="..\generic\tkImgPhoto.h" />
+    <ClInclude Include="..\generic\tkInt.h" />
+    <ClInclude Include="..\generic\tkIntDecls.h" />
+    <ClInclude Include="..\generic\tkIntPlatDecls.h" />
+    <ClInclude Include="..\generic\tkIntXlibDecls.h" />
+    <ClInclude Include="..\generic\tkMenu.h" />
+    <ClInclude Include="..\generic\tkMenubutton.h" />
+    <ClInclude Include="..\generic\tkPlatDecls.h" />
+    <ClInclude Include="..\generic\tkPort.h" />
+    <ClInclude Include="..\generic\tkScale.h" />
+    <ClInclude Include="..\generic\tkScrollbar.h" />
+    <ClInclude Include="..\generic\tkSelect.h" />
+    <ClInclude Include="..\generic\tkText.h" />
+    <ClInclude Include="..\generic\tkUndo.h" />
+    <ClInclude Include="..\generic\ttk\ttkDecls.h" />
+    <ClInclude Include="..\generic\ttk\ttkManager.h" />
+    <ClInclude Include="..\generic\ttk\ttkTheme.h" />
+    <ClInclude Include="..\generic\ttk\ttkThemeInt.h" />
+    <ClInclude Include="..\generic\ttk\ttkWidget.h" />
+    <ClInclude Include="..\xlib\X11\ap_keysym.h" />
+    <ClInclude Include="..\xlib\X11\cursorfont.h" />
+    <ClInclude Include="..\xlib\X11\DECkeysym.h" />
+    <ClInclude Include="..\xlib\X11\HPkeysym.h" />
+    <ClInclude Include="..\xlib\X11\keysym.h" />
+    <ClInclude Include="..\xlib\X11\keysymdef.h" />
+    <ClInclude Include="..\xlib\X11\Sunkeysym.h" />
+    <ClInclude Include="..\xlib\X11\X.h" />
+    <ClInclude Include="..\xlib\X11\Xatom.h" />
+    <ClInclude Include="..\xlib\X11\XF86keysym.h" />
+    <ClInclude Include="..\xlib\X11\Xfuncproto.h" />
+    <ClInclude Include="..\xlib\X11\Xlib.h" />
+    <ClInclude Include="..\xlib\X11\Xutil.h" />
+    <ClInclude Include="..\xlib\xbytes.h" />
+    <ClInclude Include="tkWin.h" />
+    <ClInclude Include="tkWinDefault.h" />
+    <ClInclude Include="tkWinInt.h" />
+    <ClInclude Include="tkWinPort.h" />
+    <ClInclude Include="tkWinSendCom.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\generic\tk3d.c" />
+    <ClCompile Include="..\generic\tkArgv.c" />
+    <ClCompile Include="..\generic\tkAtom.c" />
+    <ClCompile Include="..\generic\tkBind.c" />
+    <ClCompile Include="..\generic\tkBitmap.c" />
+    <ClCompile Include="..\generic\tkBusy.c" />
+    <ClCompile Include="..\generic\tkButton.c" />
+    <ClCompile Include="..\generic\tkCanvArc.c" />
+    <ClCompile Include="..\generic\tkCanvas.c" />
+    <ClCompile Include="..\generic\tkCanvBmap.c" />
+    <ClCompile Include="..\generic\tkCanvImg.c" />
+    <ClCompile Include="..\generic\tkCanvLine.c" />
+    <ClCompile Include="..\generic\tkCanvPoly.c" />
+    <ClCompile Include="..\generic\tkCanvPs.c" />
+    <ClCompile Include="..\generic\tkCanvText.c" />
+    <ClCompile Include="..\generic\tkCanvUtil.c" />
+    <ClCompile Include="..\generic\tkCanvWind.c" />
+    <ClCompile Include="..\generic\tkClipboard.c" />
+    <ClCompile Include="..\generic\tkCmds.c" />
+    <ClCompile Include="..\generic\tkColor.c" />
+    <ClCompile Include="..\generic\tkConfig.c" />
+    <ClCompile Include="..\generic\tkConsole.c" />
+    <ClCompile Include="..\generic\tkCursor.c" />
+    <ClCompile Include="..\generic\tkEntry.c" />
+    <ClCompile Include="..\generic\tkError.c" />
+    <ClCompile Include="..\generic\tkEvent.c" />
+    <ClCompile Include="..\generic\tkFileFilter.c" />
+    <ClCompile Include="..\generic\tkFocus.c" />
+    <ClCompile Include="..\generic\tkFont.c" />
+    <ClCompile Include="..\generic\tkFrame.c" />
+    <ClCompile Include="..\generic\tkGC.c" />
+    <ClCompile Include="..\generic\tkGeometry.c" />
+    <ClCompile Include="..\generic\tkGet.c" />
+    <ClCompile Include="..\generic\tkGrab.c" />
+    <ClCompile Include="..\generic\tkGrid.c" />
+    <ClCompile Include="..\generic\tkImage.c" />
+    <ClCompile Include="..\generic\tkImgBmap.c" />
+    <ClCompile Include="..\generic\tkImgGIF.c" />
+    <ClCompile Include="..\generic\tkImgPhInstance.c" />
+    <ClCompile Include="..\generic\tkImgPhoto.c" />
+    <ClCompile Include="..\generic\tkImgPNG.c" />
+    <ClCompile Include="..\generic\tkImgPPM.c" />
+    <ClCompile Include="..\generic\tkImgUtil.c" />
+    <ClCompile Include="..\generic\tkListbox.c" />
+    <ClCompile Include="..\generic\tkMacWinMenu.c" />
+    <ClCompile Include="..\generic\tkMain.c" />
+    <ClCompile Include="..\generic\tkMenu.c" />
+    <ClCompile Include="..\generic\tkMenubutton.c" />
+    <ClCompile Include="..\generic\tkMenuDraw.c" />
+    <ClCompile Include="..\generic\tkMessage.c" />
+    <ClCompile Include="..\generic\tkObj.c" />
+    <ClCompile Include="..\generic\tkOldConfig.c" />
+    <ClCompile Include="..\generic\tkOldTest.c" />
+    <ClCompile Include="..\generic\tkOption.c" />
+    <ClCompile Include="..\generic\tkPack.c" />
+    <ClCompile Include="..\generic\tkPanedWindow.c" />
+    <ClCompile Include="..\generic\tkPlace.c" />
+    <ClCompile Include="..\generic\tkPointer.c" />
+    <ClCompile Include="..\generic\tkRectOval.c" />
+    <ClCompile Include="..\generic\tkScale.c" />
+    <ClCompile Include="..\generic\tkScrollbar.c" />
+    <ClCompile Include="..\generic\tkSelect.c" />
+    <ClCompile Include="..\generic\tkSquare.c" />
+    <ClCompile Include="..\generic\tkStubInit.c" />
+    <ClCompile Include="..\generic\tkStubLib.c" />
+    <ClCompile Include="..\generic\tkStyle.c" />
+    <ClCompile Include="..\generic\tkTest.c" />
+    <ClCompile Include="..\generic\tkText.c" />
+    <ClCompile Include="..\generic\tkTextBTree.c" />
+    <ClCompile Include="..\generic\tkTextDisp.c" />
+    <ClCompile Include="..\generic\tkTextImage.c" />
+    <ClCompile Include="..\generic\tkTextIndex.c" />
+    <ClCompile Include="..\generic\tkTextMark.c" />
+    <ClCompile Include="..\generic\tkTextTag.c" />
+    <ClCompile Include="..\generic\tkTextWind.c" />
+    <ClCompile Include="..\generic\tkTrig.c" />
+    <ClCompile Include="..\generic\tkUndo.c" />
+    <ClCompile Include="..\generic\tkUtil.c" />
+    <ClCompile Include="..\generic\tkVisual.c" />
+    <ClCompile Include="..\generic\tkWindow.c" />
+    <ClCompile Include="..\generic\ttk\ttkBlink.c" />
+    <ClCompile Include="..\generic\ttk\ttkButton.c" />
+    <ClCompile Include="..\generic\ttk\ttkCache.c" />
+    <ClCompile Include="..\generic\ttk\ttkClamTheme.c" />
+    <ClCompile Include="..\generic\ttk\ttkClassicTheme.c" />
+    <ClCompile Include="..\generic\ttk\ttkDefaultTheme.c" />
+    <ClCompile Include="..\generic\ttk\ttkElements.c" />
+    <ClCompile Include="..\generic\ttk\ttkEntry.c" />
+    <ClCompile Include="..\generic\ttk\ttkFrame.c" />
+    <ClCompile Include="..\generic\ttk\ttkImage.c" />
+    <ClCompile Include="..\generic\ttk\ttkInit.c" />
+    <ClCompile Include="..\generic\ttk\ttkLabel.c" />
+    <ClCompile Include="..\generic\ttk\ttkLayout.c" />
+    <ClCompile Include="..\generic\ttk\ttkManager.c" />
+    <ClCompile Include="..\generic\ttk\ttkNotebook.c" />
+    <ClCompile Include="..\generic\ttk\ttkPanedwindow.c" />
+    <ClCompile Include="..\generic\ttk\ttkProgress.c" />
+    <ClCompile Include="..\generic\ttk\ttkScale.c" />
+    <ClCompile Include="..\generic\ttk\ttkScroll.c" />
+    <ClCompile Include="..\generic\ttk\ttkScrollbar.c" />
+    <ClCompile Include="..\generic\ttk\ttkSeparator.c" />
+    <ClCompile Include="..\generic\ttk\ttkSquare.c" />
+    <ClCompile Include="..\generic\ttk\ttkState.c" />
+    <ClCompile Include="..\generic\ttk\ttkStubInit.c" />
+    <ClCompile Include="..\generic\ttk\ttkStubLib.c" />
+    <ClCompile Include="..\generic\ttk\ttkTagSet.c" />
+    <ClCompile Include="..\generic\ttk\ttkTheme.c" />
+    <ClCompile Include="..\generic\ttk\ttkTrace.c" />
+    <ClCompile Include="..\generic\ttk\ttkTrack.c" />
+    <ClCompile Include="..\generic\ttk\ttkTreeview.c" />
+    <ClCompile Include="..\generic\ttk\ttkWidget.c" />
+    <ClCompile Include="..\xlib\xcolors.c" />
+    <ClCompile Include="..\xlib\xdraw.c" />
+    <ClCompile Include="..\xlib\xgc.c" />
+    <ClCompile Include="..\xlib\ximage.c" />
+    <ClCompile Include="..\xlib\xutil.c" />
+    <ClCompile Include="nmakehlp.c" />
+    <ClCompile Include="stubs.c" />
+    <ClCompile Include="tkWin32Dll.c" />
+    <ClCompile Include="tkWin3d.c" />
+    <ClCompile Include="tkWinButton.c" />
+    <ClCompile Include="tkWinClipboard.c" />
+    <ClCompile Include="tkWinColor.c" />
+    <ClCompile Include="tkWinConfig.c" />
+    <ClCompile Include="tkWinCursor.c" />
+    <ClCompile Include="tkWinDialog.c" />
+    <ClCompile Include="tkWinDraw.c" />
+    <ClCompile Include="tkWinEmbed.c" />
+    <ClCompile Include="tkWinFont.c" />
+    <ClCompile Include="tkWinImage.c" />
+    <ClCompile Include="tkWinInit.c" />
+    <ClCompile Include="tkWinKey.c" />
+    <ClCompile Include="tkWinMenu.c" />
+    <ClCompile Include="tkWinPixmap.c" />
+    <ClCompile Include="tkWinPointer.c" />
+    <ClCompile Include="tkWinRegion.c" />
+    <ClCompile Include="tkWinScrlbr.c" />
+    <ClCompile Include="tkWinSend.c" />
+    <ClCompile Include="tkWinSendCom.c" />
+    <ClCompile Include="tkWinTest.c" />
+    <ClCompile Include="tkWinWindow.c" />
+    <ClCompile Include="tkWinWm.c" />
+    <ClCompile Include="tkWinX.c" />
+    <ClCompile Include="ttkWinMonitor.c" />
+    <ClCompile Include="ttkWinTheme.c" />
+    <ClCompile Include="ttkWinXPTheme.c" />
+    <ClCompile Include="winMain.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
